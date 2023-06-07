@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+           height: 100px;
+           width: 100px;
+           background-color: aqua;
+           margin: 20px;
+           animation: x 2s infinite alternate-reverse;
+           position: relative;
+        }
+        
+
+        #two-1{
+            animation-timing-function: ease;
+        }
+        #two-2{
+            animation-timing-function: ease-in;
+        }
+        #two-3{
+            animation-timing-function: ease-out;
+        }
+        #two-4{
+            animation-timing-function: ease-in-out;
+        }
+        #two-5{
+            animation-timing-function:linear ;
+        }
+    @keyframes x {
+        from{
+            left: 0;
+        }
+        to{
+            left: 50%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- div.one#two-$*5 -->
+    <div class="one" id="two-1"></div>
+    <div class="one" id="two-2"></div>
+    <div class="one" id="two-3"></div>
+    <div class="one" id="two-4"></div>
+    <div class="one" id="two-5"></div>
+    
+</body>
+</html>

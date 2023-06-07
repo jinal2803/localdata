@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: aqua;
+        }
+
+        div {
+            display: flex;
+        }
+
+        #one {
+            height: 100vh;
+            width: 50%;
+            background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        @media (min-width:320px) and (max-width:480px) {
+            * {
+                background-color:chartreuse;
+            }
+
+            div {
+                display: inline-block;
+            }
+
+            #one {
+                height: 20vh;
+                width: 100%;
+                background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- all — for all media types
+print — for printers
+screen — for computer screens, tablets and, smart-phones
+speech — for screen readers that “read” the page out loud -->
+
+    <!-- 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV -->
+    <div>
+        <div id="one"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, aperiam recusandae eveniet velit pariatur
+            saepe nemo amet consequatur sequi provident, magnam ipsum, autem laudantium adipisci. Tenetur provident
+            sapiente molestiae nobis.</p>
+    </div>
+</body>
+
+</html>

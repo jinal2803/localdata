@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align-last: right;
+        }
+
+        div::first-letter {
+            font-size: 50px;
+            color: red;
+        }
+
+        div::first-line {
+            color: aqua;
+        }
+
+        div::after {
+            /* content: "zhjdfghjgfhjg"; */
+            /* content: url(img/ganpati.jfif); */
+        }
+
+        div::before {
+            content: "zhjdfghjgfhjg";
+        }
+
+        div::selection {
+            background-color: red;
+            color: green;
+        }
+
+        li::marker {
+            color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sequi laudantium. Ratione iure labore sequi
+        expedita totam veniam odit, eum impedit, aliquid sint quos optio iste repudiandae debitis voluptatem? Fugiat.
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

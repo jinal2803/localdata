@@ -1,0 +1,302 @@
+1. What are the benefits of using CSS?
+A. 
+1.Better website speed
+2.Easier to maintain
+3.Time saving
+4.Better device compatibility
+5.Consistent design
+6.Flexible positioning of design elements
+7. Better User Experience. CSS not only makes web pages easy on the eye, it also allows for user-friendly formatting
+8. Easy Formatting Changes
+
+2.What are the disadvantages of CSS?
+A. 1.Confusion due to many CSS versions.
+2.Cross-browser issues
+3.Limited security
+4.Extra work for developers
+
+3.What is the difference between CSS2 and CSS3?
+A.The biggest difference between CSS2 and CSS3 is that CSS3 has been split into different sections, called modules.
+CSS2, which was comprised of a single document, CSS3 has its specifications divided into many individual modules, which
+makes CSS3 a whole lot easier to handle.
+
+4.Name a few CSS style components
+A. 1.font-size.
+2.width.
+3.background-color.
+4.color.
+5.border.
+6.CSS Border. The CSS border property defines a border around an HTML element.
+7.CSS Padding. The CSS padding property defines a padding (space) between the text and the border.
+8.CSS Margin. The CSS margin property defines a margin (space) outside the border.
+
+5.What do you understand by CSS opacity?
+A.The opacity property sets the opacity level for an element.
+
+The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is
+completely transparent.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            background-color: red;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+
+6.How can the background color of an element be changed?
+
+A.To add background color in HTML, use the CSS background-color property. Set it to the color name or code you want and
+place it inside a style attribute. Then add this style attribute to an HTML element, like a table, heading, div, or span
+tag.
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            background-color: #8ebf42;
+        }
+
+        p {
+            background-color: #1c87c9;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>heading with green background.</h2>
+    <p>paragraph with blue background.</p>
+</body>
+
+</html>
+
+7. How can image repetition of the backup be controlled?
+A. To control the repetition of an image in the background, use the background-repeat property. You can use no-repeat
+value for the background-repeat property if you do not want to repeat an image, in this case, the image will display
+only once.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-image: url(photo-girl.jpg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+
+8.What is the use of the background-position property?
+
+A.The background-position property sets the starting position of a background image. Tip: By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: cadetblue;
+            /* position: static; */
+            position: relative;
+            top: 200px;
+            left: 50%;
+        }
+        #one{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        div{
+            height: 100px;
+            background-color: blueviolet;
+            top: 0;
+            position: sticky;
+        }
+        p{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: fixed;
+            top: 500px;
+            left: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="one"></div>
+    </div>
+    <div></div>
+    <p></p>
+
+9.Which property controls the image scroll in the background?
+
+A.The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.
+background-attachment: scroll|fixed|local|initial|inherit;
+
+The values of this property are defined as follows.
+
+Property Values
+scroll: It is the default value that prevents the element from scrolling with the contents, but scrolls with the page.
+
+fixed: Using this value, the background image doesn't move with the element, even the element has a scrolling mechanism. It causes the image to be locked in one place, even the rest of the document scrolls.
+
+local: Using this value, if the element has a scrolling mechanism, the background image scrolls with the content of the element.
+
+initial: It sets the property to its default value.
+
+inherit: It inherits the property from its parent element.
+
+10.Why should background and color be used as separate properties?
+
+A. There are two reasons behind this: It enhances the legibility of style sheets. The background property is a complex property in CSS, and if it is combined with color, the complexity will further increase.
+
+The background-color property sets the background color of an element.
+
+The background of an element is the total size of the element, including padding and border (but not the margin).
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #92a8d1;
+}
+</style>
+</head>
+<body>
+
+<p></p>
+
+</body>
+</html>
+
+11.How to center block elements using CSS1?
+
+A.To centrally align the block elements, we can simply make use of the <center> tag. All the elements within the <center> tag will be centrally aligned.
+    
+In order to center the block-level elements, we need to set the margin-right and margin-left properties to explicit values.
+
+12.How to maintain the CSS specifications?
+
+A.The CSS (Cascading Style Sheets) specifications are maintained by the World Wide Web Consortium (W3C). The W3C is an international standards organization that works to develop and promote web standards. The CSS specifications are a set of standards that define how CSS should be used to style HTML documents.
+
+13.What are the ways to integrate CSS as a web page?
+
+A.CSS may be added to HTML in three different ways. To style a single HTML element on the page, use Inline CSS in a style attribute. By adding CSS to the head section of our HTML document, we can embed an internal stylesheet. We can also connect to an external stylesheet that separates our CSS from our HTML.
+
+14.What is embedded style sheets?
+
+A.An embedded style sheet is declared within the <head> element of an XHTML document. It applies to the whole document, rather than just one element. Each style declaration (or CSS rule) gets applied to everything in the document that matches that rule.
+
+15.What are the external style sheets?
+
+A.An external style sheet is a separate CSS file that can be accessed by creating a link within the head section of the webpage. Multiple webpages can use the same link to access the stylesheet. The link to an external style sheet is placed within the head section of the page.
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+16.What are the advantages and disadvantages of using external style sheets?
+
+A.The advantages of External Style Sheets are:
+
+- Using them, the styles of multiple documents can be controlled from one file.
+- Classes can be created for use on multiple HTML element types in many documents.
+- In complex situations, selector and grouping methods can be used to apply styles.
+
+The disadvantages of External Style Sheets are:
+
+- In order to import style information for each document, an extra download is needed.
+- Until the external style sheet is loaded, it may not be possible to render the document.
+- For small number of style definitions, it is not viable.
+
+17.What is the meaning of the CSS selector?
+
+A.CSS Selectors
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+We can divide CSS selectors into five categories:
+
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value)
+
+18.What are the media types allowed by CSS?
+
+A. all—for all media types
+print—for printers
+screen—for computer screens, tablets and, smart-phones
+speech—for screen readers that “read” the page out loud
+continuous or paged.
+visual, audio, speech, or tactile.
+grid (for character grid devices), or bitmap.
+interactive (for devices that allow user interaction), or static (for those that do not).
+all (includes all media types)
+
+320px—480px: Mobile devices
+481px—768px: iPads, Tablets
+769px—1024px: Small screens, laptops
+1025px—1200px: Desktops, large screens
+1201px and more—Extra large screens, TV
+
+19.What is the rule set?
+
+A.A table of instructions used by a controlled interface to determine what data is allowable and how the data is handled between interconnected systems.
+
+

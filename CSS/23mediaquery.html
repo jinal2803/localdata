@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: aqua;
+        }
+        div{
+            display: flex;
+        }
+        #one{
+            height: 200vh;
+            width: 100%;
+            background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+       
+        @media (min-width:320px) and (max-width:480px){
+            *{
+            background-color:aqua;
+        }
+        }
+        div{
+            display: inline-block;
+        }
+        #one{
+            height: 100vh;
+            width: 100%;
+            background-image: url(photo-girl.jpg);
+           background-repeat: no-repeat;
+           background-size: contain;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div id="one"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus expedita exercitationem incidunt aspernatur, pariatur consequatur nihil, maiores eos quasi iste itaque consequuntur minima ipsum veritatis, voluptate error alias vitae nam!</p>
+    </div>
+</body>
+</html>

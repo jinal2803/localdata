@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       .head{
+        background-color: aqua;
+       }
+       .one-1 ul{
+        list-style-type: none;
+       }
+       .one-1{
+        background-color: red;
+       }
+       .three{
+        background-color: green;
+       }
+       .footer{
+        background-color: yellow;
+       }
+       .one-2{
+        background-color: chartreuse;
+       }
+       [class*="one-"]{
+          float: left;
+       }
+
+       /* for mobile */
+       [class*="one-"]{
+        width: 100%;
+       }
+
+       /* for tab */
+      @media screen and (min-width:600px) {
+        .one-1{
+            width: 25%;
+            height: 220px;
+        }
+        .one-2{
+            width: 50%;
+            height: 220px;
+        }
+        .three{
+            width: 25%;
+        }
+        .one-4{
+            width: 100%;
+        }
+        
+      }
+      /* for pc */
+      @media screen and (min-width:768px) {
+        .one-1{
+            width: 25%;
+            height: 170px;
+        }
+        .one-2{
+            width: 50%;
+            height: 170px;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>jinal</h1>
+    </div>
+    <div class="two">
+        <div class="one-1">
+            <ul>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+        </div>
+        <div class="one-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, maxime totam! Sint doloribus dolorum rerum harum non maiores facilis, natus inventore enim doloremque laboriosam modi unde pariatur consectetur ipsa? Ducimus!
+        </div>
+        <div class="one-1 three">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam esse iure consequatur repellendus hic, quaerat, est modi similique eaque natus quod exercitationem, unde id beatae sit architecto perferendis accusantium?
+        </div>
+        
+    </div>
+    <div class="footer">jinal</div> 
+   
+</body>
+</html>

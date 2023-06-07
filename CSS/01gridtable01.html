@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            text-align: center;
+            }
+
+        .one {
+            border: 2px solid black;
+            /* padding: 20px; */
+            margin: 20px;
+        }
+
+        .th {
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        #two1 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        #fr2 {
+            grid-row: 1/2;
+            grid-column: 2/4;
+        }
+
+        #fr3 {
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+
+        #fr4 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+
+        #fr5 {
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+
+        #fr6 {
+            grid-row: 3/4;
+            grid-column: 2/4;
+        }
+
+        .five {
+            border: 2px solid black;
+            padding: 15px;
+        }
+        #two2{
+            display:grid;
+            grid-template-columns: auto auto auto; 
+        }
+        #six1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        #six2{
+            grid-row: 1/3;
+            grid-column: 2/3;
+        }
+        #six4{
+            grid-row: 2/4;
+            grid-column: 1/2;
+        }
+        #six5{
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+        #six6{
+            grid-row: 2/4;
+            grid-column: 3/4;
+         }
+
+         #two3{
+            display:grid;
+            grid-template-columns: auto auto auto; 
+        }
+         
+        #eight1{
+            grid-row: 1/3;
+            grid-column: 1/3;
+
+        }
+        #eight2{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+        #eight3{
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+        #eigh4{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        #eight5{
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+        #eight6{
+            grid-row: 3/4;
+            grid-column: 3/4;
+        }
+
+        #two4{
+            display:grid;
+            grid-template-columns: auto auto auto auto auto; 
+        }
+        #nine1{
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+        #nine2{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+        #nine3{
+            grid-row: 1/2;
+            grid-column:4/6 ;
+        }
+        #nine4{
+            grid-row: 2/3;
+            grid-column:1/2;
+        }
+        #nine5{
+            grid-row: 2/4;
+            grid-column: 2/5;
+        }
+        #nine6{
+            grid-row: 2/3;
+            grid-column: 5/6;
+        }
+        #nine7{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        #nine8{
+            grid-row: 3/4;
+            grid-column: 5/6;
+        }
+        #nine9{
+            grid-row: 4/5;
+            grid-column: 1/3;
+        }
+        #nine10{
+            grid-row: 4/5;
+            grid-column:3/4 ;
+        }
+        #nine11{
+            grid-row: 4/5;
+            grid-column: 4/6;
+        }
+        #two5{
+            display:grid;
+            grid-template-columns: auto auto auto auto;   
+        }
+        #ten2{
+           grid-row: 1/2;
+           grid-column: 2/5;
+        }
+        #ten3{
+            grid-row: 2/4;
+            grid-column: 1/2;
+        }
+        #ten4{
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        #ten5{
+            grid-row: 2/3;
+            grid-column:3/4;
+        }
+        #ten6{
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        #ten7{
+            grid-row:3/4 ;
+            grid-column: 2/3;
+        }
+        #ten8{
+            grid-row: 3/4;
+            grid-column: 3/4;
+        }
+        #ten9{
+            grid-row: 4/5;
+            grid-column: 1/4;
+        }
+        #two6{
+            display:grid;
+            grid-template-columns: auto auto auto ; 
+        }
+        #el4{
+            grid-row: 2/3;
+            grid-column: 1/4;
+        }
+        #two7{
+            display:grid;
+            grid-template-columns: auto auto auto ; 
+        }
+        #tw1{
+            grid-row: 1/2;
+            grid-column: 1/5;
+        }
+        #tw2{
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        #tw3{
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        #tw4{
+            grid-row: 2/4;
+            grid-column:3/4 ;
+        }
+        #tw5{
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        #tw6{
+            grid-row: 3/4;
+            grid-column: 1/3;
+        }
+        #two8{
+            display:grid;
+            grid-template-columns: auto auto auto ; 
+        }
+        #fo1{
+          grid-row: 1/3;
+          grid-column: 1/3;
+        }
+        #fo2{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+        #fo3{
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+        #fo4{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        #fo5{
+            grid-row: 4/5;
+            grid-column: 1/2;
+        }
+        #fo6{
+            grid-row: 3/5;
+            grid-column: 2/4;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="one" id="two1">
+            <div class="th" id="fr1">1</div>
+            <div class="th" id="fr2">2</div>
+            <div class="th" id="fr3">3</div>
+            <div class="th" id="fr4">4</div>
+            <div class="th" id="fr5">5</div>
+            <div class="th" id="fr6">6</div>
+        </div>
+        <div class="one" id="two2">
+            <div class="th" id="six1">1</div>
+            <div class="th" id="six2">2</div>
+            <div class="th" id="six3">3</div>
+            <div class="th" id="six4">4</div>
+            <div class="th" id="six5">5</div>
+            <div class="th" id="six6">6</div>
+
+        </div>
+        <div class="one" id="two3">
+            <div class="th" id="eight1">1</div>
+            <div class="th" id="eight2">2</div>
+            <div class="th" id="eight3">3</div>
+            <div class="th" id="eight4">4</div>
+            <div class="th" id="eight5">5</div>
+            <div class="th" id="eight6">6</div>  
+        </div>
+        <div class="one" id="two4">
+            <div class="th" id="nine1">1</div>
+            <div class="th" id="nine2">2</div>
+            <div class="th" id="nine3">3</div>
+            <div class="th" id="nine4">4</div>
+            <div class="th" id="nine5">5</div>
+            <div class="th" id="nine6">6</div>
+            <div class="th" id="nine7">7</div>
+            <div class="th" id="nine8">8</div>
+            <div class="th" id="nine9">9</div>
+            <div class="th" id="nine10">10</div>
+            <div class="th" id="nine11">11</div>
+
+
+        </div>
+        <div class="one" id="two5">
+            <div class="th" id="ten1">1</div>
+            <div class="th" id="ten2">2</div>
+            <div class="th" id="ten3">3</div>
+            <div class="th" id="ten4">4</div>
+            <div class="th" id="ten5">5</div>
+            <div class="th" id="ten6">6</div>
+            <div class="th" id="ten7">7</div>
+            <div class="th" id="ten8">8</div>
+            <div class="th" id="ten9">9</div>
+            <div class="th" id="ten10">10</div>
+
+        </div>
+        <div class="one" id="two6">
+            <div class="th" id="el1">1</div>
+            <div class="th" id="el2">2</div>
+            <div class="th" id="el3">3</div>
+            <div class="th" id="el4">4</div>
+            <div class="th" id="el5">5</div>
+            <div class="th" id="el6">6</div>
+            <div class="th" id="el7">7</div>
+        </div>
+        <div class="one" id="two7">
+            <div class="th" id="tw1">1</div>
+            <div class="th" id="tw2">2</div>
+            <div class="th" id="tw3">3</div>
+            <div class="th" id="tw4">4</div>
+            <div class="th" id="tw5">5</div>
+            <div class="th" id="tw6">6</div>
+        </div>
+        <div class="one" id="two8">
+            <div class="th" id="fo1">1</div>
+            <div class="th" id="fo2">2</div>
+            <div class="th" id="fo3">3</div>
+            <div class="th" id="fo4">4</div>
+            <div class="th" id="fo5">5</div>
+            <div class="th" id="fo6">6</div> 
+        </div>
+        <div class="one" id="two9">9</div>
+        <div class="one" id="two10">10</div>
+        <div class="one" id="two11">11</div>
+        <div class="one" id="two12">12</div>
+        <div class="one" id="two13">13</div>
+        <div class="one" id="two14">14</div>
+        <div class="one" id="two15">15</div>
+        <div class="one" id="two16">16</div>
+        <div class="one" id="two17">17</div>
+        <div class="one" id="two18">18</div>
+        <div class="one" id="two19">19</div>
+        <div class="one" id="two20">20`</div>
+        <div class="one" id="two21">21</div>
+        <div class="one" id="two22">22</div>
+        <div class="one" id="two23">23</div>
+        <div class="one" id="two24">24</div>
+    </div>
+</body>
+
+</html>
