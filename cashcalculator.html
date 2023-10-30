@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #cashcounter {
+    /* width: 500px; */
+    /* background-color: lightgray; */
+    text-align: center;
+    border: 2px solid black;
+    /* width: 1000px; */
+
+  }
+
+  .inpt {
+    width: 150px;
+    padding: 10px;
+    
+  }
+
+  #equel {
+    padding: 10px;
+  }
+
+  #total11 {
+    background-color: lightgray;
+    padding: 10px;
+    font-size: x-large;
+    margin: 2px;
+  }
+
+  #notes {
+    background-color: lightgray;
+    padding: 10px;
+    font-size: x-large;
+  }
+
+  #amount1 {
+
+    width: 100px;
+    /* height: 100px; */
+    /* margin-top:100px ; */
+
+
+  }
+  .inp{
+      display: none;
+    }
+
+  @media only screen and (max-width: 600px) {
+    #cashcounter {
+      width: 500px;
+
+    }
+
+    .inpt {
+      width: 100px;
+      padding: 5px;
+    }
+
+    #equel {
+      padding: 5px;
+    }
+    
+  }
+</style>
+<script>
+  function multiplayby() {
+    var twothsnd = document.getElementById("inpt1").value;
+    totl = (twothsnd * 2000);
+    document.getElementById("totl").value = totl;
+
+    var fivehun = document.getElementById("inpt2").value;
+    second = (fivehun * 500);
+    document.getElementById("fivehun").value = second;
+
+    var twohun = document.getElementById("inpt3").value;
+    third = (twohun * 200);
+    document.getElementById("twohun").value = third;
+
+    var hundred = document.getElementById("inpt4").value;
+    four = (hundred * 100);
+    document.getElementById("hundred").value = four;
+
+    var fifty = document.getElementById("inpt5").value;
+    five = (fifty * 50);
+    document.getElementById("fifty").value = five;
+
+    var twenty = document.getElementById("inpt6").value;
+    six = (twenty * 20);
+    document.getElementById("twenty").value = six;
+
+    var ten = document.getElementById("inpt7").value;
+    seven = (ten * 10);
+    document.getElementById("ten").value = seven;
+
+    var five = document.getElementById("inpt8").value;
+    eight = (five * 5);
+    document.getElementById("five").value = eight;
+
+    var two = document.getElementById("inpt9").value;
+    nine = (two * 2);
+    document.getElementById("two").value = nine;
+
+    var one = document.getElementById("inpt10").value;
+    ten = (one * 1);
+    document.getElementById("one").value = ten;
+
+    var total = +totl + +second + +third + +four + +five + +six + +seven + +eight + +nine + +ten;
+    document.getElementById("total11").innerHTML = "Total Cash: " + total;
+
+    var total1 = +twothsnd + +fivehun + +twohun + +hundred + +fifty + +twenty + +ten + +five + +two + +one;
+    document.getElementById("notes").innerHTML = "Total Note's:" + total1;
+         
+    var num = parseInt(total);
+    document.getElementById('words').innerHTML = test(num);
+    
+    function test(n) {
+            if (n < 0)
+                return false;
+            single_digit = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
+            double_digit = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
+            below_hundred = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
+            if (n === 0) return 'Zero'
+            function translate(n) {
+                word = ""
+                if (n < 10) {
+                    word = single_digit[n] + ' '
+                }
+                else if (n < 20) {
+                    word = double_digit[n - 10] + ' '
+                }
+                else if (n < 100) {
+                    rem = translate(n % 10)
+                    word = below_hundred[(n - n % 10) / 10 - 2] + ' ' + rem
+                }
+                else if (n < 1000) {
+                    word = single_digit[Math.trunc(n / 100)] + ' Hundred ' + translate(n % 100)
+                }
+                else if (n < 1000000) {
+                    word = translate(parseInt(n / 1000)).trim() + ' Thousand ' + translate(n % 1000)
+                }
+                else if (n < 1000000000) {
+                    word = translate(parseInt(n / 1000000)).trim() + ' Million ' + translate(n % 1000000)
+                }
+                else {
+                    word = translate(parseInt(n / 1000000000)).trim() + ' Billion ' + translate(n % 1000000000)
+                }
+                return word
+            }
+            result = translate(n)
+            return result.trim() + ' only'
+        }
+
+
+        const copyContent = async () => {
+            let cash = document.getElementById('cash').innerText
+            let note = document.getElementById('note').innerText
+            let word = document.getElementById('word').innerText;
+            let content = `${cash}\n ${note}\n ${word}\n`
+            try {
+                await navigator.clipboard.writeText(content);
+                alert('Content copied to clipboard');
+            } catch (err) {
+                alert('Failed to copy: ', err);
+            }
+        }
+      }
+</script>
+
+<body>
+  <div id="cashcounter">
+    <h1 style="text-align: center;">Cash Calculator</h1>
+    <table align="center">
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/2000-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt1" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="totl" placeholder="0" class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/500-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt2" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="fivehun" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/Rs200/200-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt3" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="twohun" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/Rs100/100-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt4" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="hundred" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/Rs50/50-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt5" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="fifty" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/Rs20/20-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt6" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="twenty" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://paisaboltahai.rbi.org.in/images/Rs10/10-note-front.png" alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt7" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="ten" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/5_Rupees_%28Obverse%29.jpg" alt=""
+            id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt8" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="five" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img src="https://english.cdn.zeenews.com/sites/default/files/2022/02/04/1011699-tworupeenote.jpg" alt=""
+            id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt9" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="two" placeholder="0"class="inp"></td>
+      </tr>
+      <tr>
+        <td><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/India_1_R_2015%2C_obverse.jpg/640px-India_1_R_2015%2C_obverse.jpg"
+            alt="" id="amount1"></td>
+        <td><input type="text" class="inpt" name="" id="inpt10" placeholder="0" onkeyup="multiplayby()"></td>
+        <td><button id="equel">=</button></td>
+        <td><input type="text" class="inpt" name="" id="one" placeholder="0"class="inp"></td>
+      </tr>
+    </table>
+
+    <div id="total11">Total Cash:</div>
+
+    <div id="notes">Total Note's:</div>
+    
+    <div ><span id="words"></span></div>
+
+
+
+  </div>
+</body>
+
+</html>
