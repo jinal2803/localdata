@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      float: left;
+      position: relative;
+      width: 10%;
+    }
+
+    .itemimg {
+      width: 23.9vw;
+    }
+
+    .itemimg1 {
+      width: 23.4vw;
+    }
+
+    .flex-container5 {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .flex-container5 .footer1 {
+      padding: 35px;
+    }
+
+    #f1 {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .foot1 {
+      text-align: start;
+      padding: 10px 32px;
+
+    }
+
+    footer {
+      background-color: #2c4152;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      height: 80px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .linksignin {
+      margin-right: -340px;
+      margin-top: -50px;
+      font-size: 15px;
+
+    }
+
+    .linksignin a {
+      text-decoration: none;
+      color: grey;
+    }
+
+    .searchbox {
+      margin-top: 30px;
+    }
+
+    input {
+      width: 20vw;
+      padding: 3px 10px;
+      border: 0.5px solid black;
+      border-radius: 20px;
+      background-color: lightyellow;
+    }
+
+    .fa-magnifying-glass {
+      margin-top: 5px;
+      margin-right: 4px;
+      background-color: lightyellow;
+
+    }
+
+    .fa-heart {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #2c4152;
+      padding: 7px;
+      color: white;
+    }
+
+    .fa-bag-shopping {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #2c4152;
+      padding: 7px;
+      color: white;
+    }
+
+    .navbar-nav {
+      margin-top: 31px;
+
+    }
+
+    .linksignin a.visit {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .color {
+      color: white;
+    }
+
+    .section1 {
+      float: right;
+      width: 80%;
+      padding: 20px 20px;
+    }
+
+    .section {
+      float: left;
+      width: 20%;
+    }
+
+    .header1 {
+      text-align: center;
+      font-family: Lora;
+      font-weight: 400;
+      font-size: 12px;
+      color: #a7a7a7;
+      text-transform: uppercase;
+    }
+
+    .header2 {
+      font-family: Lora;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: .1px;
+      color: #333;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    .itemimg {
+      padding: 10px 10px;
+    }
+
+    .brand {
+      text-align: center;
+      margin: 1px;
+      font-family: SourceSansPro;
+      color: #b19975;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 6px;
+    }
+
+    .original-price {
+      color: #666;
+      font-family: SourceSansPro;
+      font-size: 12px;
+      text-decoration: line-through;
+    }
+
+    .discount {
+      color: #b19975;
+      font-family: SourceSansPro;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .details {
+      text-align: center;
+      font-family: SourceSansPro;
+
+    }
+
+    .details .item1 {
+      padding: px 10px;
+    }
+
+    .details .price {
+      font-family: SourceSansPro;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .pera {
+      text-align: left;
+      font-family: SourceSansPro;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: .1px;
+      color: #666;
+      padding: 0 70px;
+      margin-top: 6px;
+      line-height: 1.3em;
+    }
+
+    .links {
+      display: flex;
+
+      font-size: 11px;
+      margin-top: 10px;
+    }
+
+    .list {
+      list-style-type: none;
+      float: left;
+      margin-right: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #afacac;
+    }
+
+    .headtype {
+      text-transform: capitalize;
+      font-size: 18px;
+      font-family: lora;
+      margin: 5px 4px;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .headtype:after {
+      position: relative;
+      color: #2c4152;
+      font-size: 30px;
+      right: 0;
+      position: absolute;
+      top: -5px;
+      font-weight: 400;
+    }
+
+    .genderfilter {
+      font-size: 14px;
+      margin: 5px;
+      color: #333;
+      cursor: pointer;
+      position: relative;
+      padding-left: 21px;
+      text-transform: capitalize;
+    }
+
+    .divission {
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 15px;
+    }
+
+    .divission:before {
+      content: "\2b";
+      margin-right: 10px;
+      font-size: 18px;
+      position: relative;
+      top: 0;
+      font-weight: 700;
+    }
+
+    .popup {
+      height: 45px;
+      line-height: 45px;
+      width: 100%;
+      color: #2c4154;
+      display: none;
+      position: absolute;
+      bottom: 100px;
+      left: 9px;
+      background-color: hsla(0, 0%, 100%, .7);
+      text-align: center;
+      font-weight: 700;
+      font-family: SourceSansPro;
+      text-transform: uppercase
+    }
+
+    .imageitem:hover .popup {
+      display: block;
+    }
+
+    .imageitem {
+      position: relative;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="javascript:void(0)"></a> -->
+        <img src="ajio.png" alt="" class="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="right flex items-center">
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto flex items-center  justify-center uppercase bolder">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">MEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">WOMEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">KIDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">INDIE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">HOME AND KITCHEN</a>
+              </li>
+            </ul>
+            <div class="linksignin flex">
+              <p><a href="">Sign In / Jion AJIO</a></p>
+              <p><a href="">Customer Care</a></p>
+              <p> <a href="" class="visit">visit AJIOLUXE</a></p>
+            </div>
+            <div class="searchbox flex">
+              <input class="Search" placeholder="Search AJIO" class="desktop-searchBar" value="" data-reactid="">
+              <!-- <button> <i class="fa-solid fa-magnifying-glass"></i></button> -->
+              <div class="profile mx-2 "><i class="fa-regular fa-heart"></i></div>
+              <div class="wishlist mx-2"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+          </div>
+  </header>
+
+  </nav>
+  <div class="container section">
+    <div class="main1">
+      <ul class="links">
+        <li><a href="" class="list">Home</a></li>
+        <li><a href="" class="list">Women</a></li>
+        <li><a href="" class="list">Ethnic Wear</a></li>
+        <li><a href="" class="list">Sarees</a></li>
+      </ul>
+      <div class="headtype">
+        Refine By
+      </div>
+      <p>-Gender</p>
+      <div>
+        <!-- <input type="checkbox" id="women" value="women"> -->
+        <label class="genderfilter" for="women">women(109,246)</label>
+      </div>
+      <p>- Category</p>
+      <div>
+        <!-- <input type="checkbox" id="women" value="women"> -->
+        <label class="genderfilter" for="women">Sarees (109,246)</label>
+        <!-- <input type="checkbox" id="women" value="women"> -->
+        <label class="genderfilter" for="women">Dress Material (5)</label>
+      </div>
+
+      <div class="divission">
+
+        <span>price</span>
+      </div>
+      <div class="divission">
+
+        <span>Brands</span>
+      </div>
+      <div class="divission">
+
+        <span>Occasion</span>
+      </div>
+      <div class="divission">
+
+        <span>Discount</span>
+      </div>
+      <div class="divission">
+
+        <span>Colors</span>
+      </div>
+      <div class="divission">
+
+        <span>Size & Fit</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <section class="container section1 flex flex-wrap">
+      <div>
+        <p class="header1">WOMEN'S</p>
+        <h4 class="header2">Sarees</h4>
+
+        <div >
+          <P class="pera">Traditional, trendy, stylish and graceful, there’s no denying that a woman’s beauty is
+            accentuated
+            by a saree. When you are shopping online for designer sarees for festive occasions or regular sarees for
+            casual
+            ethnic wear, you won’t have to look further than AJIO. From gorgeous silk sarees to crisp cottons, you’ll be
+            amazed with the selection from brands such as Indie Picks and Banasuri. <a href="#">+</a> </P>
+            
+        </div>
+      </div>
+      <div class="imageitem">
+        <div class="imageholder">
+          <a href="http://127.0.0.1:5500/ajio/ajio-page-3.html">
+          <img class="itemimg"
+            src="https://assets.ajio.com/medias/sys_master/root/20230629/6rOh/649d8c08eebac147fc41181b/morly_maroon_kanjeevaram_woven_floral_printed_saree.jpg"
+            alt=""></a>
+        </div>
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">MORLY</h6>
+          <p class="saree" class="item1">Kanjeevaram Woven Floral Printed Saree </p>
+          <div class="amount">
+            <span class="price" class="item1">₹892</span>
+            <span class="original-price" class="item1">₹4,299</span>
+            <span class="discount" class="item1">(79% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230711/VyeE/64ad4f02a9b42d15c94ccdd0/rasvriti_maroon_banarasi_soft_silk_saree_with_woven_motifs.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Rasvriti</h6>
+          <p class="saree" class="item1">Banarasi Soft Silk Saree with Woven Motifs</p>
+          <div class="amount">
+            <span class="price" class="item1">₹999</span>
+            <span class="original-price" class="item1">₹2,499</span>
+            <span class="discount" class="item1">(60% off)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230629/iwUi/649d3e00eebac147fc3f8b15/kedar_fab_sky_blue_floral_embroidery_saree.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">KEDAR FAB</h6>
+          <p class="saree" class="item1">Floral Embroidery Saree</p>
+          <div class="amount">
+            <span class="price" class="item1">₹1,140</span>
+            <span class="original-price" class="item1">₹2,999</span>
+            <span class="discount" class="item1">(62% off)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230626/rYv4/6499aea4eebac147fc09b1ec/saree_mall_red_saree_mall_red_bhagalpuri_silk_ethnic_printed_festive_saree_with_matching_blouse_saree.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">TSaree mall</h6>
+          <p class="saree" class="item1">Saree Red Bhagalpuri Silk Ethnic Printed saree</p>
+          <div class="amount">
+            <span class="price" class="item1">₹699</span>
+            <span class="original-price" class="item1">₹2,999</span>
+            <span class="discount" class="item1">(77% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230605/vTcw/647de83042f9e729d7234ec6/marziyaa_green_saree_with_floral_woven_motifs.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Marziyaa</h6>
+          <p class="saree" class="item1">Saree with Floral Woven Motifs</p>
+          <div class="amount">
+            <span class="price" class="item1">₹987</span>
+            <span class="original-price" class="item1">₹2,099</span>
+            <span class="discount" class="item1">(53% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230629/ymvY/649c8b4fa9b42d15c9164c7a/kedar_fab_white_sheer-through_saree_with_embroidery.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">KEDAR FAB</h6>
+          <p class="saree" class="item1">Foil-Print Saree with Lace Border</p>
+          <div class="amount">
+            <span class="price" class="item1">₹479</span>
+            <span class="original-price" class="item1">₹2,995</span>
+            <span class="discount" class="item1">(59% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230526/GES8/64707151d55b7d0c631473a8/tereza_wine_foil-print_saree_with_lace_border.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">TEREZA</h6>
+          <p class="saree" class="item1">Foil-Print Saree with Lace Border</p>
+          <div class="amount">
+            <span class="price" class="item1">₹479</span>
+            <span class="original-price" class="item1">₹2,995</span>
+            <span class="discount" class="item1">(84% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230711/SfK7/64ad4ea5a9b42d15c94cc22e/rasvriti_white_banarasi_cotton_silk_saree_with_zari_border.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Rasvriti</h6>
+          <p class="saree" class="item1">Banarasi Cotton Silk Saree with Zari Border</p>
+          <div class="amount">
+            <span class="price" class="item1">₹999</span>
+            <span class="original-price" class="item1">₹₹2,499</span>
+            <span class="discount" class="item1">(60% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230203/1a1x/63dcf506f997dd708e3726bd/indie_picks_indigo_kutch_handblock_print_ajrak_pure_modal_saree.jpg"
+          alt="">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Indie Picks</h6>
+          <p class="saree" class="item1">Kutch Handblock Print Ajrak Pure Modal Saree </p>
+          <div class="amount">
+            <span class="price" class="item1">₹5,224</span>
+            <span class="original-price" class="item1">₹9,499</span>
+            <span class="discount" class="item1">(45% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230710/4Qg8/64abec4ca9b42d15c947c858/besucher_peach_woven_kanjeevaram_soft_silk_saree_with_zari_accent.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">BESUCHER</h6>
+          <p class="saree" class="item1">Woven Kanjeevaram soft silk saree with Zari </p>
+          <div class="amount">
+            <span class="price" class="item1">₹1,160</span>
+            <span class="original-price" class="item1">₹3,999</span>
+            <span class="discount" class="item1">(71% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230425/0hj9/6447a0e3d55b7d0c637ce1f0/jkanji_blue_colourblock_saree_with_tassels.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Jkanji</h6>
+          <p class="saree" class="item1">Colourblock Saree with Tassels</p>
+          <div class="amount">
+            <span class="price" class="item1">₹1,199</span>
+            <span class="original-price" class="item1">₹1,199</span>
+            <span class="discount" class="item1">(40% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230628/wizn/649bb1fceebac147fc1d3930/dokhona_orange_saree_with_floral_woven_motifs.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">DOKHONA</h6>
+          <p class="saree" class="item1">Saree with Floral Woven Motifs</p>
+          <div class="amount">
+            <span class="price" class="item1">₹749</span>
+            <span class="original-price" class="item1">₹1,999</span>
+            <span class="discount" class="item1">(63% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230628/ncBG/649b8da1eebac147fc1882ca/dokhona_purple_floral_print_traditional_saree.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">DOKHONA</h6>
+          <p class="saree" class="item1">Floral Print Traditional Saree</p>
+          <div class="amount">
+            <span class="price" class="item1">₹649</span>
+            <span class="original-price" class="item1">₹1,999</span>
+            <span class="discount" class="item1">(68% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230628/Ehe4/649ba5b8eebac147fc1bb3a3/gorgone_metallic_tie_%26_dye_mysore_silk_saree.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Gorgone</h6>
+          <p class="saree" class="item1">Tie & Dye Mysore Silk Saree</p>
+          <div class="amount">
+            <span class="price" class="item1">₹398</span>
+            <span class="original-price" class="item1">₹2,651</span>
+            <span class="discount" class="item1">(85% off)</span>
+          </div>
+        </div>
+      </div>
+      <div class="imageitem">
+        <img class="itemimg"
+          src="https://assets.ajio.com/medias/sys_master/root/20230711/Zhaw/64ad4f68eebac147fc64d95b/rasvriti_black_saree_with_floral_woven_motifs.jpg">
+        <div class="popup">Quick View</div>
+        <div class="details">
+          <h6 class="brand" class="item1">Rasvriti</h6>
+          <p class="saree" class="item1">Saree with Floral Woven Motifs</p>
+          <div class="amount">
+            <span class="price" class="item1">₹999</span>
+            <span class="original-price" class="item1">₹2,499</span>
+            <span class="discount" class="item1">(60% off)</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>

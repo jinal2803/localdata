@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      float: left;
+      position: relative;
+      width: 10%;
+    }
+
+    .d-block,
+    .itemimg,
+    .itemimg1 {
+      transition: transform .6s ease-in;
+      will-change: transform;
+    }
+
+    .d-block:hover,
+    .itemimg:hover,
+    .itemimg1:hover {
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+    }
+
+    .itemimg {
+      width: 23.9vw;
+    }
+
+    .itemimg1 {
+      width: 23.4vw;
+    }
+
+    .flex-container5 {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .flex-container5 .footer1 {
+      padding: 35px;
+    }
+
+    .flex-container5 {
+      display: flex;
+      flex-direction: row;
+    }
+
+
+
+    @media (max-width: 800px) {
+      .flex-container5 {
+        flex-direction: column;
+      }
+    }
+
+    #f1 {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .foot1 {
+      text-align: start;
+      padding: 10px 32px;
+
+    }
+
+    footer {
+      background-color: #2c4152;
+    }
+
+    header {
+      /* position: sticky; */
+      top: 0;
+      background-color: white;
+      height: 90px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .linksignin {
+      margin-right: -340px;
+      margin-top: -50px;
+      font-size: 15px;
+
+    }
+
+    .linksignin a {
+      text-decoration: none;
+      color: grey;
+    }
+
+    .searchbox {
+      margin-top: 30px;
+    }
+
+    input {
+      width: 20vw;
+      padding: 3px 10px;
+      border: 0.5px solid black;
+      border-radius: 20px;
+      background-color: lightyellow;
+    }
+
+    .fa-magnifying-glass {
+      margin-top: 5px;
+      margin-right: 4px;
+      background-color: lightyellow;
+
+    }
+
+    .fa-heart {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #2c4152;
+      padding: 7px;
+      color: white;
+    }
+
+    .fa-bag-shopping {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #2c4152;
+      padding: 7px;
+      color: white;
+    }
+
+    .navbar-nav {
+      margin-top: 31px;
+      position: relative;
+
+    }
+
+    .list1 {
+      height: 400px;
+      width: 40%;
+      margin-left: 20px;
+      display: none;
+      position: absolute;
+      background-color: white;
+      
+    }
+
+    .nav-item:hover .list1 {
+      display: block;
+    }
+
+    .linksignin a.visit {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .color {
+      color: white;
+    }
+
+    .rilrtl-button {
+      position: relative;
+      right: 0;
+      z-index: 2;
+      height: 10px;
+      padding: 0;
+      min-width: 35px;
+      margin-left: -40px;
+      margin-top: 5px;
+      border: none;
+      background-color: lightyellow;
+      color: black;
+    }
+
+    .fa-magnifying-glass {
+      height: 10px;
+      width: 10px;
+      /* background-color: red; */
+      margin-left: -30px;
+    }
+
+
+    .all {
+      font-size: 20px;
+      /* color: blueviolet; */
+      color: #e84393;
+      font-weight: demi;
+    }
+
+    .vi {
+      color: black;
+      text-decoration: none;
+    }
+
+    .sarees {
+      font-size: 20px;
+      color: #e84393;
+      font-weight: demi;
+    }
+
+    .allsarees {
+      color: black;
+      text-decoration: none;
+    }
+
+    .silk {
+      color: black;
+      text-decoration: none;
+    }
+
+    .cottonsilk {
+      color: black;
+      text-decoration: none;
+    }
+
+    .cottonsarees {
+      color: black;
+      text-decoration: none;
+    }
+
+    .geo {
+      color: black;
+      text-decoration: none;
+    }
+
+    .chiff {
+      color: black;
+      text-decoration: none;
+    }
+
+    .satin {
+      color: black;
+      text-decoration: none;
+    }
+
+    .emb {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="javascript:void(0)"></a> -->
+        <img src="imgs/ajio.png" alt="" class="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="right flex items-center ">
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto flex items-center  justify-center uppercase bolder">
+              <li class="nav-item">
+                <a class="nav-link" href="Ajio2.html">MEN</a>
+                <div class="list1 nav-sub-list-cont">
+                  <div class="sc-gKPRtg KBVqN nav-sub-list nav-sub-list" color="white">
+                    <div class="all  sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sc-iBYQkv dkNa-Ds">WESTERN WEAR</span></div><a class="vi  sub-list-item pointer"
+                      href="/ethnicwear-women/pl/3tq">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItem_ParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        View All</p>
+                    </a>
+                  </div>
+                  <div class="sc-gKPRtg ejfvGh nav-sub-list nav-sub-list" color="greyT5Subdued">
+                    <div class="sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sarees  sc-iBYQkv dkNa-Ds">WESTERN WEAR</span></div><a
+                      class="allsarees  sub-list-item pointer" href="/sarees/pl/3iy">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Jackets & Coats</p>
+                    </a><a class="silk  sub-list-item pointer" href="/silk-sarees/pl/3j4">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Jeans</p>
+                    </a><a class="cottonsilk  sub-list-item pointer" href="/cotton-silk-sarees/pl/3jt">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Shirts</p>
+                    </a><a class="cottonsarees  sub-list-item pointer" href="/cotton-sarees/pl/3jh">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Sweatshirts & Hoodies</p>
+                    </a><a class="geo sub-list-item pointer" href="/georgette-sarees/pl/3m1">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        rack Pants</p>
+                    </a><a class="chiff  sub-list-item pointer" href="/chiffon-sarees/pl/3m0">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Trousers & Pants</p>
+                    </a><a class="satin  sub-list-item pointer" href="/satin-sarees/pl/3k5">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        T-Shirts</p>
+                    </a><a class="emb  sub-list-item pointer" href="/embroidered-sarees/pl/3ju">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Shorts & 3/4ths</p>
+                    </a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Ajio3.html">WOMEN</a>
+                <div class="list1 nav-sub-list-cont">
+                  <div class="sc-gKPRtg KBVqN nav-sub-list nav-sub-list" color="white">
+                    <div class="all  sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sc-iBYQkv dkNa-Ds">WESTERN WEAR</span></div><a class="vi  sub-list-item pointer"
+                      href="/ethnicwear-women/pl/3tq">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItem_ParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        View All</p>
+                    </a>
+                  </div>
+                  <div class="sc-gKPRtg ejfvGh nav-sub-list nav-sub-list" color="greyT5Subdued">
+                    <div class="sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sarees  sc-iBYQkv dkNa-Ds">ETHNIC WEAR</span>
+                    </div><a class="allsarees  sub-list-item pointer" href="ajiowomen.html">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Sarees</p>
+                    </a><a class="silk  sub-list-item pointer" href="/silk-sarees/pl/3j4">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Kurtas</p>
+                    </a><a class="cottonsilk  sub-list-item pointer" href="/cotton-silk-sarees/pl/3jt">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Dress Material</p>
+                    </a><a class="cottonsarees  sub-list-item pointer" href="/cotton-sarees/pl/3jh">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Salwars & Churidars</p>
+                    </a><a class="geo sub-list-item pointer" href="/georgette-sarees/pl/3m1">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Dupattas</p>
+                    </a><a class="chiff  sub-list-item pointer" href="/chiffon-sarees/pl/3m0">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Kurta Suit Sets</p>
+                    </a><a class="satin  sub-list-item pointer" href="/satin-sarees/pl/3k5">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Skirts & Ghagras</p>
+                    </a><a class="emb  sub-list-item pointer" href="/embroidered-sarees/pl/3ju">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Palazzos & Culottes</p>
+                    </a>
+                  </div>
+              </li>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Ajio4.html">KIDS</a>
+                <div class="list1 nav-sub-list-cont">
+                  <div class="sc-gKPRtg KBVqN nav-sub-list nav-sub-list" color="white">
+                    <div class="all  sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sc-iBYQkv dkNa-Ds">FEATURED</span></div><a class="vi  sub-list-item pointer"
+                      href="/ethnicwear-women/pl/3tq">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItem_ParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        View All</p>
+                    </a>
+                  </div>
+                  <div class="sc-gKPRtg ejfvGh nav-sub-list nav-sub-list" color="greyT5Subdued">
+                    <div class="sub-list-title"><span font-size="16px" font-weight="demi" color="pinkBase"
+                        class="sarees  sc-iBYQkv dkNa-Ds">GIRLS</span>
+                    </div><a class="allsarees  sub-list-item pointer" href="/sarees/pl/3iy">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Jeans & Jeggings</p>
+                    </a><a class="silk  sub-list-item pointer" href="/silk-sarees/pl/3j4">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Leggings</p>
+                    </a><a class="cottonsilk  sub-list-item pointer" href="/cotton-silk-sarees/pl/3jt">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        uterwear</p>
+                    </a><a class="cottonsarees  sub-list-item pointer" href="/cotton-sarees/pl/3jh">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Skirts & Shorts</p>
+                    </a><a class="geo sub-list-item pointer" href="/georgette-sarees/pl/3m1">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Tops & T-Shirts</p>
+                    </a><a class="chiff  sub-list-item pointer" href="/chiffon-sarees/pl/3m0">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        T-Shirts</p>
+                    </a><a class="satin  sub-list-item pointer" href="/satin-sarees/pl/3k5">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        Shorts & 3/4ths</p>
+                    </a><a class="emb  sub-list-item pointer" href="/embroidered-sarees/pl/3ju">
+                      <p font-size="16px" font-weight="book" color="greyT1"
+                        class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                        T-Shirts</p>
+                    </a>
+                  </div>
+              </li>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">INDIE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">HOME AND KITCHEN</a>
+              </li>
+            </ul>
+            <div class="linksignin flex">
+              <p><a href="">Sign In / Jion AJIO</a></p>
+              <p><a href="">Customer Care</a></p>
+              <p> <a href="" class="visit">visit AJIOLUXE</a></p>
+            </div>
+            <div class="searchbox flex">
+              <input class="Search" placeholder="Search AJIO" class="desktop-searchBar" value="" data-reactid="">
+              <span class="ic-search"></span>
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <div class="profile mx-2 "><i class="fa-regular fa-heart"></i></div>
+              <div class="wishlist mx-2"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+          </div>
+
+
+
+  </header>
+
+  </nav>
+  <div class="container-fluid">
+    <!-- <div>
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/14062023-UHP-D-UrgencyStrip-Last3-.gif" alt="" width="100%">
+    </div> -->
+
+    <!-- The slideshow/carousel -->
+
+    <div id="carouselExampleSlidesOnly1" class="carousel slide img-animate " data-bs-ride="carousel"
+      data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/23072023-UHP-D-GiantFashionSale-5080.gif" alt="Los Angeles"
+            class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/23072023-UHP-D-GiantFashionSale-5080.gif" alt="Chicago"
+            class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/25072023-UHP-D-main-P3-NikeReebok-min30.jpg" alt="New York"
+            class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/25072023-UHP-D-main-P4-DillingerTheBearHouse-min60.jpg"
+            alt="New York" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/25072023-UHP-D-main-P5-DNMXTs-under499.jpg" alt="New York"
+            class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/25072023-UHP-D-main-P6-IdeeRayban-upto70extra10.jpg"
+            alt="New York" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://assets.ajio.com/cms/AJIO/WEB/29072023-UHP-D-main-P7-mnsgap-upto50.jpg" alt="New York"
+            class="d-block" style="width:100%">
+        </div>
+      </div>
+      <!-- Carousel -->
+      <div id="main1" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="4"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="5"></button>
+          <button type="button" data-bs-target="#main1" data-bs-slide-to="6"></button>
+        </div>
+      </div>
+
+      <!-- The slideshow/carousel -->
+
+      <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/1440x128-Paytm22.jpg" alt="Los Angeles" class="d-block"
+              style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-wallet-relianceone1.jpg" alt="Chicago"
+              class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/1440x128-mobikwikggg.jpg" alt="New York" class="d-block"
+              style="width:100%">
+          </div>
+        </div>
+        <!-- Carousel -->
+        <div id="main2" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#main2" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#main2" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#main2" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#main2" data-bs-slide-to="3"></button>
+          </div>
+        </div>
+        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBanner-header.jpg" alt="" width="100%"
+            class="d-block">
+        </div>
+        <!-- The slideshow/carousel -->
+
+        <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-top-P1-orchidbluesGilto-starting199extra35.jpg"
+                alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-Top-P2-adidas-upto50.jpg" alt="Chicago"
+                class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-top-P3-NIkeAsics-Upto50.jpg" alt="New York"
+                class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-top-P4-melorraPCchandra-upto50.jpg"
+                alt="New York" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-top-P5-AzorteAltheoryOutryt-min50.jpg"
+                alt="New York" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-top-P6-lee-min50.jpg" alt="New York"
+                class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-TOP-P7-StyliTruebrown-upto50.jpg"
+                alt="New York" class="d-block" style="width:100%">
+            </div>
+          </div>
+        </div>
+        <!-- Carousel -->
+        <div id="main3" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#main3" data-bs-slide-to="3"></button>
+          </div>
+        </div>
+        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Wallet-RelianceOne.jpg" alt="" width="100%"
+            class="d-block">
+        </div>
+        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-header.jpg" alt="" width="100%"
+            class="d-block">
+        </div>
+      </div>
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+          </div>
+          <div class="carousel-item">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-pumaadidas-min50.jpg" class="d-block"
+              class="d-block w-100" alt="...">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-nikecrocs-upto50.jpg" class="d-block"
+              class="d-block w-100" alt="...">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-TIGCLKetch-upto70.jpg" class="d-block"
+              class="d-block w-100" alt="...">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-pumaadidas-min50.jpg" class="d-block"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-avaasaGulmohar-min60.jpg"
+              class="d-block" class="d-block w-100" alt="...">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-superdryax-min40.jpg" class="d-block"
+              class="d-block w-100" alt="...">
+            <img class="itemimg"
+              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-levisjphnplayers-min55.jpg"
+              class="d-block" class="d-block w-100" alt="...">
+            <img class="itemimg" src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-TopBrands-baggit-upto75.jpg"
+              class="d-block" class="d-block w-100" alt="...">
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-FREEDEL-allorders.jpg" alt="" width="100%"
+            class="d-block">
+        </div>
+        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DailyBanner-Header.jpg" alt="" width="100%"
+            class="d-block">
+        </div>
+
+        <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-daily-P1-adidas-upto50(1).jpg"
+                alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-daily-P2-campus-upto50.jpg" alt="Chicago"
+                class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-daily-P3-jockey-starting199.jpg"
+                alt="New York" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-Daily-P4-aldo-upto50.jpg" alt="New York"
+                class="d-block" style="width:100%">
+            </div>
+
+          </div>
+          <!-- Carousel -->
+          <div id="main4" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#main4" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#main4" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#main4" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#main4" data-bs-slide-to="3"></button>
+
+            </div>
+          </div>
+          <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DailyBanne-Header-1.jpg" alt=""
+              width="100%" class="d-block"></div>
+
+          <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-DailyBU-P1-Figrio-starting199.jpg"
+                  alt="Los Angeles" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-DailyBU-P2-puma-4070.jpg" alt="Chicago"
+                  class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-dailybu-P3-NikeAscis-upto50.jpg"
+                  alt="New York" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-DailyBU-P5-GivaIskiUski-min50.jpg"
+                  alt="New York" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-DailyBU-P5-GivaIskiUski-min50.jpg"
+                  alt="New York" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-DailyBU-P7-misschaseDifferenceOfOpinion-flat50exytra30.jpg"
+                  alt="New York" class="d-block" style="width:100%">
+              </div>
+
+            </div>
+            <!-- Carousel -->
+            <div id="main5" class="carousel slide" data-bs-ride="carousel">
+              <!-- Indicators/dots -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#main5" data-bs-slide-to="5"></button>
+
+              </div>
+            </div>
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                </div>
+                <div class="carousel-item">
+                  <img class="itemimg" src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-Header.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-firsttimediscount-upto40.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-wardrobesuperheroes-upto60.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-footwear-upto80.jpg"
+                    class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-menswestern-starting299.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-womenwestern-starting199.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-womensethnic-starting1999.jpg"
+                    class="d-block w-100" alt="...">
+                  <img class="itemimg"
+                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Bestsellers-kidswear-starting129.jpg"
+                    class="d-block w-100" alt="...">
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div> <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-dailymen-header.jpg" alt=""
+                  width="100%" class="d-block"></div>
+              <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-uhp-d-uhphim-p1-m&s-upto50.jpg"
+                      alt="Los Angeles" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://assets.ajio.com/cms/AJIO/WEB/15072023-uhp-d-uhphim-p2-reebok-adidasoriginals-flat35.jpg"
+                      alt="Chicago" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://assets.ajio.com/cms/AJIO/WEB/15072023-uhp-d-uhphim-p3-vanheusen-louisphillipe-min40.jpg"
+                      alt="New York" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-uhp-d-uhphim-p4-uspa-levis-upto55.jpg"
+                      alt="New York" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-uhp-d-uhphim-p5-gstarraw-upto50.jpg"
+                      alt="New York" class="d-block" style="width:100%">
+                  </div>
+
+
+                </div>
+                <!-- Carousel -->
+                <div id="main6" class="carousel slide" data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#main6" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#main6" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#main6" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#main6" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#main6" data-bs-slide-to="4"></button>
+                  </div>
+                </div>
+                <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-dailywomen-header.jpg" alt=""
+                    width="100%"></div>
+                <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel"
+                  data-bs-interval="3000">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-UHPwomen-p1-adidas-skechers-upto50.jpg"
+                        alt="Los Angeles" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-UHPwomen-p2-forevernew-upto50.jpg"
+                        alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-UHPwomen-p3-allennsolly-aeropostale-min40.jpg"
+                        alt="New York" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-UHPwomen-p4-ancestry-upto50.jpg"
+                        alt="New York" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-UHPwomen-p5-levis-kraus-pepejeans-min40.jpg"
+                        alt="New York" class="d-block" style="width:100%">
+                    </div>
+
+
+                  </div>
+                  <!-- Carousel -->
+                  <div id="main7" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#main7" data-bs-slide-to="0" class="active"></button>
+                      <button type="button" data-bs-target="#main7" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#main7" data-bs-slide-to="2"></button>
+                      <button type="button" data-bs-target="#main7" data-bs-slide-to="3"></button>
+                      <button type="button" data-bs-target="#main7" data-bs-slide-to="4"></button>
+                    </div>
+                  </div>
+                  <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-NC-header.jpg" alt="" width="100%">
+                  </div>
+                  <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel"
+                    data-bs-interval="3000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-NC-P1-CapreseAccessorizeLondon-upto70.jpg"
+                          alt="Los Angeles" class="d-block" style="width:100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-NC-P2-MatheyTiscotGiordano-min50extra10.jpg"
+                          alt="Chicago" class="d-block" style="width:100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-NC-P3-PorticoHomeexpressions-under999.jpg"
+                          alt="New York" class="d-block" style="width:100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-NC-P4-BevogueMatchitt-under599.jpg"
+                          alt="New York" class="d-block" style="width:100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-NC-P5-indiepicks-upto70.jpg"
+                          alt="New York" class="d-block" style="width:100%">
+                      </div>
+
+
+                    </div>
+                    <!-- Carousel -->
+                    <div id="main8" class="carousel slide" data-bs-ride="carousel">
+                      <!-- Indicators/dots -->
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#main8" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#main8" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#main8" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#main8" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#main8" data-bs-slide-to="4"></button>
+                      </div>
+                    </div>
+                    <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-JIT-Header.jpg" alt=""
+                        width="100%"></div>
+                    <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel"
+                      data-bs-interval="3000">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P1-EvenKurtipedia-min60.jpg"
+                            alt="Los Angeles" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P2-anubhuteeHangup-flat60extraupto30.jpg"
+                            alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P3-thebearhousestylum-min60extraupto30.jpg"
+                            alt="New York" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P4-dillingerfashor-under499extraupto35.jpg"
+                            alt="New York" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P5-ZivameEnamor-Starting249extraupto35.jpg"
+                            alt="New York" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P6-MisschaseDifferenceOfOpiion-lfat50extra30.jpg"
+                            alt="New York" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="https://assets.ajio.com/cms/AJIO/WEB/15072023-UHP-D-JIT-P7-AnubhuteeSojanya-flat55extraupto30.jpg"
+                            alt="New York" class="d-block" style="width:100%">
+                        </div>
+
+
+                      </div>
+                      <!-- Carousel -->
+                      <div id="main8" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="0" class="active"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="1"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="2"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="3"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="4"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="5"></button>
+                          <button type="button" data-bs-target="#main8" data-bs-slide-to="6"></button>
+
+                        </div>
+                      </div>
+                      <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-header.jpg" alt=""
+                          width="100%"></div>
+                      <div id="carouselExampleSlidesOnly1" class="carousel slide " data-bs-ride="carousel"
+                        data-bs-interval="3000">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-BudaFyrerose-acai-upto60.jpg"
+                              alt="Los Angeles" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-avaasadnmxnetplay-upto70.jpg"
+                              alt="Chicago" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-azorteAltheoryOutryt-min50.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-AvaasaSiyaahiFusion-upto70.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-leecooperJohnPlayers-4070.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-figrio-min50.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-kgfrendzKBTS-under399.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Trends-schumannhiattitude-upto70.jpg"
+                              alt="New York" class="d-block" style="width:100%">
+                          </div>
+
+
+                        </div>
+                        <!-- Carousel -->
+                        <div id="main9" class="carousel slide" data-bs-ride="carousel">
+                          <!-- Indicators/dots -->
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="6"></button>
+                            <button type="button" data-bs-target="#main9" data-bs-slide-to="7"></button>
+
+                          </div>
+                        </div>
+
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-header.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-SpykarWrangler-Starting999.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-USPAThebearhouse-starting499.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-dressestops-starting599.jpg"
+                                class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-dressestops-starting599.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-formalwear-starting899.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-athleisure-upto50.jpg"
+                                class="d-block w-100" alt="...">
+                              <img class="itemimg"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Westernwear-mothercareadidaskids-starting399.jpg"
+                                class="d-block w-100" alt="...">
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                              data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                              data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-Header.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-pumaskechers-starting1199.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-redtapecampus-starting299.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-uspaadidas-min50.jpg"
+                                  class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-clarksstevemadden-min50.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-homecentrejaipurfabric-upto80.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-casiofossil-upto70extra10.jpg"
+                                  class="d-block w-100" alt="...">
+                                <img class="itemimg"
+                                  src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Footwear-polaroidlovemoschino-upto70.jpg"
+                                  class="d-block w-100" alt="...">
+                              </div>
+
+                              <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                            <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-Header.jpg"
+                                alt="" width="100%"></div>
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-trendyol-3060.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-guess-upto40.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-koton-3060.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-nakd-3070.jpg"
+                                    class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-ISIF-3060.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-frimelange-4070.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-barrelsoil-4060.jpg"
+                                    class="d-block w-100" alt="...">
+                                  <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HiddenGems-xint-flat50.jpg"
+                                    class="d-block w-100" alt="...">
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-header.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-Hailysadidaskids-min30.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-mothercare-min40.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-crocs-3060.jpg"
+                                      class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-uspapepejeans-min40.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-hellcattoonyport-upto70.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-KBTS-starting179.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <img class="itemimg"
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Kidswear-rio-starting199.jpg"
+                                      class="d-block w-100" alt="...">
+                                  </div>
+
+                                  <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+                                <div><img
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-header.jpg"
+                                    alt="" width="100%" class="d-block"></div>
+
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-nike-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-brooksbrothers-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-ucb-3070.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-aldo-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-aldo-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-tomy-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-ax-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                      <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Superstarbrands-gstarraw-upto50.jpg"
+                                        class="d-block w-100" alt="...">
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button"
+                                      data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                      data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                                  <div><img
+                                      src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-Header.jpg"
+                                      width="100%" alt="" class="d-block"></div>
+
+                                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-dennislingo-min60.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-akskurtipedia-min50.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-styli-min50.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-arrow-min40.jpg"
+                                          class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-arrow-min40.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-onlykazo-min50.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-louisphilippe-min40.jpg"
+                                          class="d-block w-100" alt="...">
+                                        <img class="itemimg"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-Classics-eyebogler-min60.jpg"
+                                          class="d-block w-100" alt="...">
+                                      </div>
+
+                                      <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                      </button>
+                                      <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                      </button>
+                                    </div>
+
+                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-Header.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-storyathomeJaipurFabric-starting249.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-craftIndia999Store-upto80.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-HomecentreEverlane-upto70.jpg"
+                                            class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-DecoWindowStoryAtHome-starting199.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-porticospaces-upto50.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-saralhomeazeem-upto80.jpg"
+                                            class="d-block w-100" alt="...">
+                                          <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-HomeKitchen-uniqchoicehomefabindia-upto80.jpg"
+                                            class="d-block w-100" alt="...">
+                                        </div>
+
+                                        <button class="carousel-control-prev" type="button"
+                                          data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                          data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                      <div><img
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-header.jpg"
+                                          alt="" width="100%" class="d-block"></div>
+                                      <div><img
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-AjioGold.jpg"
+                                          width="100%" alt="" class="d-block"></div>
+                                      <section class="container-fluid section1 flex flex-wrap">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-westernwear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-westernwear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-westernwear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-westernwear.jpg"
+                                          alt="" class="d-block">
+                                      </section>
+                                      <section class="container-fluid section1 flex flex-wrap">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-sportswear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-footwear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-accessories.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-sarees.jpg"
+                                          alt="" class="d-block">
+                                      </section>
+                                      <section class="container-fluid section1 flex flex-wrap">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-wedding.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-homegrownbrands.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-indie.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-home.jpg"
+                                          alt="" class="d-block">
+                                      </section>
+                                      <section class="container-fluid section1 flex flex-wrap">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-watches.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-loungeinnerwear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-jewellery.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-womenlingerie.jpg"
+                                          alt="" class="d-block">
+                                      </section>
+                                      <section class="container-fluid section1 flex flex-wrap">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-beauty.jpg"
+                                          alt="">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-yogawear.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-azorte.jpg"
+                                          alt="" class="d-block">
+                                        <img class="itemimg1"
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-DiscoverOnlineStores-max.jpg"
+                                          alt="" class="d-block">
+                                      </section>
+                                      <div><img
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/Discover%20Online%20Stores%20(D)qqq.jpg"
+                                          alt="" width="100%" class="d-block"></div>
+                                      <div><img
+                                          src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip11.jpg"
+                                          alt="" width="100%" class="d-block"></div>
+                                      <div><img src="imgs/ajio123.png" alt="" width="100%"></div>
+
+                                      <footer>
+                                        <div class="flex-container5" class="container-fluid">
+                                          <div class="footer1">
+                                            <h6 class="foot1"><a href="" id="f1">Ajio</h6>
+                                            <ul>
+                                              <li> <a href="" id="f1">Who We Are</a></li>
+                                              <li> <a href="" id="f1">Join Our Team</a></li>
+                                              <li><a href="" id="f1">Tearms & Conditions</a></li>
+                                              <li><a href="" id="f1">We Respect Your Policy</a></li>
+                                              <li><a href="" id="f1">Fees & Payments</a></li>
+                                              <li><a href="" id="f1">Returns & Refunds Policy</a></li>
+                                              <li><a href="" id="f1">Promotions Terms & Conditions</a></li>
+                                            </ul>
+
+                                          </div>
+                                          <div class="footer1">
+                                            <h6 class="foot1"><a href="" id="f1">Help</a></h6>
+                                            <ul>
+                                              <li> <a href="" id="f1">Track Your Order </a></li>
+                                              <li> <a href="" id="f1">Frequently Asked Questions</a></li>
+                                              <li><a href="" id="f1">Returns</a></li>
+                                              <li><a href="" id="f1">Cancellations</a></li>
+                                              <li><a href="" id="f1">Payments</a></li>
+                                              <li><a href="" id="f1">Customer Care</a></li>
+                                              <li><a href="" id="f1">How Do I Redeem My Coupon</a></li>
+
+                                          </div>
+                                          <div class="footer1">
+                                            <h6 class="foot1"><a href="" id="f1">Shop by</a></h6>
+                                            <ul>
+                                              <li> <a href="" id="f1">Men</a></li>
+                                              <li> <a href="" id="f1">Women</a></li>
+                                              <li><a href="" id="f1">Kids</a></li>
+                                              <li><a href="" id="f1">Indie</a></li>
+                                              <li><a href="" id="f1">Stores</a></li>
+                                              <li><a href="" id="f1">New Arrivals</a></li>
+                                              <li><a href="" id="f1">Brand Directory</a></li>
+                                              <li><a href="" id="f1">Home</a></li>
+                                              <li><a href="" id="f1">Collection</a></li>
+
+                                          </div>
+                                          <div class="footer1">
+                                            <h6 class="foot1"><a href="" id="f1">Follow us</a></h6>
+                                            <ul>
+                                              <li> <a href="" id="f1">Facbook</a></li>
+                                              <li> <a href="" id="f1">instagram-AJIOlife</a></li>
+                                              <li><a href="" id="f1">instagram-AJIO LUXE</a></li>
+                                              <li><a href="" id="f1">Twitter</a></li>
+                                              <li><a href="" id="f1">Pinterest</a></li>
+
+                                          </div>
+                                        </div>
+                                        <hr class="color">
+                                        <div><img src="imgs/payments method.png" alt="" width="100%"></div>
+                                    </div>
+
+                                  </div>
+
+                                </div>
+
+                                </footer>
+
+
+
+
+</body>
+
+</html>

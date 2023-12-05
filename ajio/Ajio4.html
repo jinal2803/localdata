@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="AJIO2.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            float: left;
+            position: relative;
+            width: 10%;
+        }
+
+        .d-block,
+        .itemimg,
+        .itemimg1 {
+            transition: transform .6s ease-in;
+            will-change: transform;
+        }
+
+        .d-block:hover,
+        .itemimg:hover,
+        .itemimg1:hover {
+            transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+        }
+
+        .itemimg22 {
+            width: 32vw;
+        }
+
+        .itemimg {
+            width: 23.9vw;
+        }
+
+        .itemimg1 {
+            width: 23.4vw;
+        }
+
+        .flex-container5 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .flex-container5 .footer1 {
+            padding: 35px;
+        }
+        
+        @media (max-width: 800px) {
+            .flex-container5 {
+                flex-direction: column;
+            }
+        }
+
+        #f1 {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .foot1 {
+            text-align: start;
+            padding: 10px 32px;
+
+        }
+
+        footer {
+            background-color: #2c4152;
+        }
+
+        header {
+
+            top: 0;
+            background-color: white;
+            height: 90px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .linksignin {
+            margin-right: -340px;
+            margin-top: -50px;
+            font-size: 15px;
+
+        }
+
+        .linksignin a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .searchbox {
+            margin-top: 30px;
+        }
+
+        input {
+            width: 20vw;
+            padding: 3px 10px;
+            border: 0.5px solid black;
+            border-radius: 20px;
+            background-color: lightyellow;
+        }
+
+        .fa-magnifying-glass {
+            margin-top: 5px;
+            margin-right: 4px;
+            background-color: lightyellow;
+
+        }
+
+        .fa-heart {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: #2c4152;
+            padding: 7px;
+            color: white;
+        }
+
+        .fa-bag-shopping {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: #2c4152;
+            padding: 7px;
+            color: white;
+        }
+
+        .navbar-nav {
+            margin-top: 31px;
+
+        }
+
+        .linksignin a.visit {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .color {
+            color: white;
+        }
+
+        .rilrtl-button {
+            position: relative;
+            right: 0;
+            z-index: 2;
+            height: 10px;
+            padding: 0;
+            min-width: 35px;
+            margin-left: -40px;
+            margin-top: 5px;
+            border: none;
+            background-color: lightyellow;
+            color: black;
+        }
+
+        .itemimgrec {
+            width: 48.4vw;
+        }
+
+        .fa-magnifying-glass {
+            height: 10px;
+            width: 10px;
+            /* background-color: red; */
+            margin-left: -30px;
+        }
+        all {
+            font-size: 20px;
+            /* color: blueviolet; */
+            color: #e84393;
+            font-weight: demi;
+        }
+
+        .vi {
+            color: black;
+            text-decoration: none;
+        }
+
+        .sarees {
+            font-size: 20px;
+            color: #e84393;
+            font-weight: demi;
+        }
+
+        .allsarees {
+            color: black;
+            text-decoration: none;
+        }
+
+        .silk {
+            color: black;
+            text-decoration: none;
+        }
+
+        .cottonsilk {
+            color: black;
+            text-decoration: none;
+        }
+
+        .cottonsarees {
+            color: black;
+            text-decoration: none;
+        }
+
+        .geo {
+            color: black;
+            text-decoration: none;
+        }
+
+        .chiff {
+            color: black;
+            text-decoration: none;
+        }
+
+        .satin {
+            color: black;
+            text-decoration: none;
+        }
+
+        .emb {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .navbar-nav {
+            margin-top: 31px;
+            position: relative;
+
+        }
+
+        .list1 {
+            height: 400px;
+            width: 40%;
+
+            margin-left: 20px;
+            justify-content: space-around;
+            display: none;
+            position: absolute;
+            background-color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover .list1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="javascript:void(0)"></a> -->
+                <img src="imgs/ajio.png" alt="" class="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="right flex items-center">
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav me-auto flex items-center  justify-center uppercase bolder">
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://127.0.0.1:5500/ajio/Ajio2.html">MEN</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="http://127.0.0.1:5500/ajio/Ajio3.html">WOMEN</a>
+                                
+                              <li class="nav-item">
+                                <a class="nav-link" href="http://127.0.0.1:5500/ajio/Ajio4.html">KIDS</a>
+                                <div class="list1 nav-sub-list-cont">
+                                    <div class="sc-gKPRtg KBVqN nav-sub-list nav-sub-list" color="white">
+                                        <div class="all  sub-list-title"><span font-size="16px" font-weight="demi"
+                                                color="pinkBase" class="sc-iBYQkv dkNa-Ds">FEATURED</span></div><a
+                                            class="vi  sub-list-item pointer" href="/ethnicwear-women/pl/3tq">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItem_ParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                View All</p>
+                                        </a>
+                                    </div>
+                                    <div class="sc-gKPRtg ejfvGh nav-sub-list nav-sub-list" color="greyT5Subdued">
+                                        <div class="sub-list-title"><span font-size="16px" font-weight="demi"
+                                                color="pinkBase" class="sarees  sc-iBYQkv dkNa-Ds">GIRLS</span>
+                                        </div><a class="allsarees  sub-list-item pointer" href="/sarees/pl/3iy">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                Jeans & Jeggings</p>
+                                        </a><a class="silk  sub-list-item pointer" href="/silk-sarees/pl/3j4">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                Leggings</p>
+                                        </a><a class="cottonsilk  sub-list-item pointer"
+                                            href="/cotton-silk-sarees/pl/3jt">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                uterwear</p>
+                                        </a><a class="cottonsarees  sub-list-item pointer" href="/cotton-sarees/pl/3jh">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                Skirts & Shorts</p>
+                                        </a><a class="geo sub-list-item pointer" href="/georgette-sarees/pl/3m1">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                Tops & T-Shirts</p>
+                                        </a><a class="chiff  sub-list-item pointer" href="/chiffon-sarees/pl/3m0">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                T-Shirts</p>
+                                        </a><a class="satin  sub-list-item pointer" href="/satin-sarees/pl/3k5">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                Shorts & 3/4ths</p>
+                                        </a><a class="emb  sub-list-item pointer" href="/embroidered-sarees/pl/3ju">
+                                            <p font-size="16px" font-weight="book" color="greyT1"
+                                                class="sc-iBYQkv cPFcHn MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp MenuItemParagraphBody-sc-1c49nqf-0 jjSmfp">
+                                                T-Shirts</p>
+                                        </a>
+                                    </div>
+                              </li>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">INDIE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">HOME AND KITCHEN</a>
+                            </li>
+                        </ul>
+                        <div class="linksignin flex">
+                            <p><a href="">Sign In / Jion AJIO</a></p>
+                            <p><a href="">Customer Care</a></p>
+                            <p> <a href="" class="visit">visit AJIOLUXE</a></p>
+                        </div>
+                        <div class="searchbox flex">
+                            <input class="Search" placeholder="Search AJIO" class="desktop-searchBar" value=""
+                                data-reactid="">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+
+                            <div class="profile mx-2 "><i class="fa-regular fa-heart"></i></div>
+                            <div class="wishlist mx-2"><i class="fa-solid fa-bag-shopping"></i></div>
+                        </div>
+                    </div>
+
+
+
+    </header>
+
+    </nav>
+
+    <div class="container-fluid">
+        <div>
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/24072023-D-KHP-mainbanner-giantfashionsale-5080.gif" alt=""
+                width="100%">
+        </div>
+
+        <!-- The slideshow/carousel -->
+
+        <div id="carouselExampleSlidesOnly1" class="carousel slide img-animate " data-bs-ride="carousel"
+            data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/INSTANT%20(2).png" alt="Los Angeles" class="d-block"
+                        style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-wallet-relianceone1.jpg" alt="Chicago"
+                        class="d-block" style="width:100%">
+                </div>
+
+            </div>
+            <!-- Carousel -->
+            <div id="main1" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#main1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#main1" data-bs-slide-to="1"></button>
+
+                </div>
+            </div>
+            <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbannercarsousel-header.jpg" alt=""
+                    width="100%" class="d-block">
+            </div>
+
+
+            <!-- The slideshow/carousel -->
+
+            <div id="carouselExampleSlidesOnly1" class="carousel slide img-animate " data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsouel-p1-brands-under599.png"
+                            alt="Los Angeles" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsouel-p2-pepejeans-upto50.jpg"
+                            alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsouel-p3-brands-min40.jpg"
+                            alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-dailybanner-p4-hamleys-upto50.jpg"
+                            alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsousel-p5-lifestyle-upto60.jpg"
+                            alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsouel-p6-brands-starting299.png"
+                            alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+
+                </div>
+                <!-- Carousel -->
+                <div id="main1" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#main1" data-bs-slide-to="5"></button>
+                    </div>
+                </div>
+
+                <div><img src="https://assets.ajio.com/cms/AJIO/WEB/1440x128-mobikwikggg.jpg" alt="" width="100%"
+                        class="d-block"></div>
+                <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-UHP-D-FREEDEL-allorders.jpg" alt=""
+                        width="100%" class="d-block"></div>
+                <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-dailybanner-header.jpg" alt=""
+                        width="100%" class="d-block"></div>
+
+
+                <!-- The slideshow/carousel -->
+
+                <div id="carouselExampleSlidesOnly1" class="carousel slide img-animate " data-bs-ride="carousel"
+                    data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-dailybanner-p1-brands-min55.png"
+                                alt="Los Angeles" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-dailybanner-p2-GAP-upto50.jpg"
+                                alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-dailybanner-p3-Indianterrainboy-min60.png"
+                                alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-dailybanner-p4-hamleys-upto50.jpg"
+                                alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsousel-p5-lifestyle-upto60.jpg"
+                                alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://assets.ajio.com/cms/AJIO/WEB/28072023-D-KHP-topbannercarsouel-p6-brands-starting299.png"
+                                alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+
+                    </div>
+                    <!-- Carousel -->
+                    <div id="main1" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#main1" data-bs-slide-to="5"></button>
+                        </div>
+                    </div>
+                    <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-header.jpg" alt=""
+                            width="100%" class="d-block"></div>
+
+
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-mothercare-min40.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-uspa-min40.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-crocs-upto50.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-puma-4070.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+
+                            </div>
+                            <div class="carousel-item">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-puma-4070.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-adidaskids-min30.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-ucb-3060.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                                <img class="itemimg"
+                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-topbrands-pepejeans-min30.jpg"
+                                    class="d-block" class="d-block w-140" alt="...">
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-header.jpg" alt=""
+                                width="100%" class="d-block"></div>
+                        <section class="section flex flex-wrap">
+                            <img class="itemimgrec"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-infants-0to2yrs.jpg"
+                                alt="">
+                            <img class="itemimgrec"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-toddlers-3-5yrs.jpg"
+                                alt="" class="d-block">
+
+                        </section>
+                        <section class="section flex flex-wrap">
+                            <img class="itemimgrec"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-kids-6-8yrs.jpg"
+                                alt="">
+                            <img class="itemimgrec"
+                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-tweens-9-12yrs.jpg"
+                                alt="" class="d-block">
+
+                        </section>
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyage-teens-13+yrs.jpg" alt=""
+                            width="100%" class="d-block">
+                        <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-header.jpg" alt=""
+                            width="100%" class="d-block">
+
+                        <!-- The slideshow/carousel -->
+
+                        <div id="carouselExampleSlidesOnly1" class="carousel slide img-animate " data-bs-ride="carousel"
+                            data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-topcollection-brands-starting99.jpg"
+                                        alt="Los Angeles" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-dressesforher-starting249.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-t-shirtfits-starting149.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-comfiestpicks-min50.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-birthdaybash-min50.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-bottomwear-upto60.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-topicks-brands-upto60.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendscarousel-topicks-brands-upto60.jpg"
+                                        alt="Chicago" class="d-block" style="width:100%">
+                                </div>
+
+                            </div>
+                            <!-- Carousel -->
+                            <div id="main1" class="carousel slide" data-bs-ride="carousel">
+                                <!-- Indicators/dots -->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="3"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="4"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="5"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="6"></button>
+                                    <button type="button" data-bs-target="#main1" data-bs-slide-to="7"></button>
+                                </div>
+                            </div>
+
+                            <div><img src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-header.jpg"
+                                    alt="" width="100%" class="d-block"></div>
+
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-kuchipoo-min60.jpg"
+                                            class="d-block" class="d-block w-140" alt="...">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-lilpicks-upto70.jpg"
+                                            class="d-block" class="d-block w-140" alt="...">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-miniklub-min50.jpg"
+                                            class="d-block" class="d-block w-140" alt="...">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-skechers-upto40.jpg"
+                                            class="d-block" class="d-block w-140" alt="...">
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <section class="section flex flex-wrap">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-ed-a-mamma-upto70.jpg"
+                                        alt="">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-M&S-upto50.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-hellcat-min50.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-indianterrainboy-min40.jpg"
+                                        alt="" class="d-block">
+
+                                </section>
+                                <section class="section flex flex-wrap">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-playday-min40.jpg"
+                                        alt="">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-toonyport-min40.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-mom'slove-starting129.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestbrands-teamspiritboy-starting199.jpg"
+                                        alt="" class="d-block">
+
+                                </section>
+
+                                <section class="section flex flex-wrap">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforher-header.jpg"
+                                        alt="">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforher-ethnicwear-min50.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforher-westernwear-min50.jpg"
+                                        alt="" class="d-block">
+                                    <img class="itemimg"
+                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforher-night&loungewear-starting149.jpg"
+                                        alt="" class="d-block">
+
+                                </section>
+
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-header.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-shirts-min50.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-kurtas-min50.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-t-shirts-starting99.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-t-shirts-starting99.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-sweaters&sweatshirts-min50.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-sportshoes&sneakers-starting299.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                            <img class="itemimg"
+                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopforhim-trackpants-starting199.jpg"
+                                                class="d-block" class="d-block w-140" alt="...">
+                                        </div>
+
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+
+                                    <div><img
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-footwear-header.jpg"
+                                            alt="" width="100%" class="d-block"></div>
+
+                                    <section class="section flex flex-wrap">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-footwear-sports%20&%20outdoor%20shoes-brands-3060.jpg"
+                                            alt="">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-footwear-sandals%20&%20sneakers-brands-upto35.jpg"
+                                            alt="" class="d-block">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-footwear-clogs%20&%20slippers-brands-min30.jpg"
+                                            alt="" class="d-block">
+                                        <img class="itemimg"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-footwear-season's%20musthaves-brands-min30.jpg"
+                                            alt="" class="d-block">
+
+
+                                    </section>
+
+                                    <div><img
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-header.jpg"
+                                            alt="" width="100%" class="d-block"></div>
+
+                                    </section>
+
+                                    <section class="section flex flex-wrap">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-min70.jpg"
+                                            alt="">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-min60.jpg"
+                                            alt="" class="d-block">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-min50.jpg"
+                                            alt="" class="d-block">
+
+                                    </section>
+
+                                    <section class="section flex flex-wrap">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-starting99.jpg"
+                                            alt="">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-starting399.jpg"
+                                            alt="" class="d-block">
+                                        <img class="itemimg22"
+                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discounttiles-starting599.jpg"
+                                            alt="" class="d-block">
+
+                                    </section>
+
+                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-header.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-board,card&puzzlegames-min30.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-socks&stockings-under499.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-hairaccesories-starting119.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-socks&stockings-under499.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-hairaccesories-starting119.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-schoolstationary-3050.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-backtoschool-schoolshoes-starting349.jpg"
+                                                    class="d-block" class="d-block w-140" alt="...">
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+
+                                        <div id="carouselExampleControls" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-header-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-t-shirts&shirts-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-tops&tunics-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-dresses&skirts-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-tops&tunics-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-dresses&skirts-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-jeans&jeggings-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                    <img class="itemimg"
+                                                        src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-newseason-flipflops&clogs-brands-upto30.jpg"
+                                                        class="d-block" class="d-block w-140" alt="...">
+                                                </div>
+
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                            <div><img
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-header.jpg"
+                                                    alt="" width="100%" class="d-block"></div>
+
+                                            <section class="section flex flex-wrap">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-trampoline-min50.jpg"
+                                                    alt="">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/replace%20image%20desk.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-tior-min50.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-toyballoon-min50.jpg"
+                                                    alt="" class="d-block">
+
+                                            </section>
+
+                                            <section class="section flex flex-wrap">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-nike-min50.jpg"
+                                                    alt="">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-dnmx-min30.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-campus-upto50.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-tommyhilfiger-3050.jpg"
+                                                    alt="" class="d-block">
+
+                                            </section>
+                                            <section class="section flex flex-wrap">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-GAP-min20.jpg"
+                                                    alt="">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-cutecumber-min50.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-liberty-starting199.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-trendingbrands-ellekids-min40.jpg"
+                                                    alt="" class="d-block">
+
+
+                                            </section>
+                                            <div><img
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bundlestore-header.jpg"
+                                                    alt="" width="100%" class="d-block"></div>
+
+
+                                            <section class="section flex flex-wrap">
+                                                <img class="itemimg22"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bundlestore-packof2.jpg"
+                                                    alt="">
+                                                <img class="itemimg22"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bundlestore-packof3.jpg"
+                                                    alt="" class="d-block">
+                                                <img class="itemimg22"
+                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bundlestore-packof5.jpg"
+                                                    alt="" class="d-block">
+                                            </section>
+                                            <div><img src="https://assets.ajio.com/cms/AJIO/WEB/gcnxfgn.jpg" alt=""
+                                                    width="100%" class="d-block"></div>
+
+                                            <div id="carouselExampleControls" class="carousel slide"
+                                                data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-header-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-t-shirts-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-schoolshoes-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-leggings-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-leggings-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-flip-flops-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-shorts-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                        <img class="itemimg"
+                                                            src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-innerwear-under399.jpg"
+                                                            class="d-block" class="d-block w-140" alt="...">
+                                                    </div>
+
+                                                    <button class="carousel-control-prev" type="button"
+                                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                        <span class="carousel-control-prev-icon"
+                                                            aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Previous</span>
+                                                    </button>
+                                                    <button class="carousel-control-next" type="button"
+                                                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                        <span class="carousel-control-next-icon"
+                                                            aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Next</span>
+                                                    </button>
+                                                </div>
+
+                                                <div id="carouselExampleControls" class="carousel slide"
+                                                    data-bs-ride="carousel">
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-header-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-westernwearsets-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-westernwearsets-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-tops-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-tops-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-trackpants-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-dresses-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-nightwear-under599.jpg"
+                                                                class="d-block" class="d-block w-140" alt="...">
+                                                        </div>
+
+                                                        <button class="carousel-control-prev" type="button"
+                                                            data-bs-target="#carouselExampleControls"
+                                                            data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button"
+                                                            data-bs-target="#carouselExampleControls"
+                                                            data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="carouselExampleControls" class="carousel slide"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-header-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-jeans&trousers-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-jeans&trousers-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-ethnicwearsets-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-ethnicwearsets-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-juimpsuits-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-schoolsupplies&books-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                                <img class="itemimg"
+                                                                    src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-bestdeals-schoolsupplies&books-under999.jpg"
+                                                                    class="d-block" class="d-block w-140" alt="...">
+                                                            </div>
+
+                                                            <button class="carousel-control-prev" type="button"
+                                                                data-bs-target="#carouselExampleControls"
+                                                                data-bs-slide="prev">
+                                                                <span class="carousel-control-prev-icon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </button>
+                                                            <button class="carousel-control-next" type="button"
+                                                                data-bs-target="#carouselExampleControls"
+                                                                data-bs-slide="next">
+                                                                <span class="carousel-control-next-icon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </button>
+                                                        </div>
+
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyoccasion-header.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyoccasion-newborn-5070.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyoccasion-festivecelebrations-3070.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyoccasion-activewear-starting199.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-shopbyoccasion-birthdays&parties-upto70.jpg"
+                                                                alt="" class="d-block">
+                                                        </section>
+
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-characterstore-header.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-characterstore-tom&jerry.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-characterstore-mickeymouse.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-characterstore-chhotabheem.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-characterstore-spiderman.jpg"
+                                                                alt="" class="d-block">
+                                                        </section>
+
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-header.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-duke-min40.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-hoppipola-from199.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-nautikidz-3070.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-jack&jones-3060.jpg"
+                                                                alt="" class="d-block">
+                                                        </section>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-aarikaethincgirls-min50.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-GAS-min20.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-AND-3060.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-exploremorebrands-muhuratam-min50.jpg"
+                                                                alt="" class="d-block">
+                                                        </section>
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-header.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-hairaccessories.jpg"
+                                                                alt="">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-sunglasses.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-bags.jpg"
+                                                                alt="" class="d-block">
+
+                                                        </section>
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-casualshoes.jpg"
+                                                                alt="">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-sandals.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg22"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-accessories-toys.jpg"
+                                                                alt="" class="d-block">
+
+                                                        </section>
+
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discoveronlinestores-header.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discoveronlinestores-mothercare.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discoveronlinestores-hamleys.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discoveronlinestores-trends.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-discoveronlinestores-maxasd.jpg"
+                                                                alt="" class="d-block">
+
+                                                        </section>
+
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-lasttoybanner-hamleys.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <section class="section flex flex-wrap">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-lasttiles-lego.jpg"
+                                                                alt="">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-lasttiles-comdaq.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-lasttiles-disney.jpg"
+                                                                alt="" class="d-block">
+                                                            <img class="itemimg"
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/01072023-D-KHP-lasttiles-funskool.jpg"
+                                                                alt="" class="d-block">
+
+                                                        </section>
+                                                        <div><img
+                                                                src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip11.jpg"
+                                                                alt="" width="100%" class="d-block"></div>
+
+                                                        <div><img src="imgs/ajio123.png" alt="" width="100%"
+                                                                class="d-block"></div>
+
+                                                        <footer>
+                                                            <div class="flex-container5" class="container-fluid">
+                                                                <div class="footer1">
+                                                                    <h6 class="foot1"><a href="" id="f1">Ajio</h6>
+                                                                    <ul>
+                                                                        <li> <a href="" id="f1">Who We Are</a></li>
+                                                                        <li> <a href="" id="f1">Join Our Team</a></li>
+                                                                        <li><a href="" id="f1">Tearms & Conditions</a>
+                                                                        </li>
+                                                                        <li><a href="" id="f1">We Respect Your
+                                                                                Policy</a></li>
+                                                                        <li><a href="" id="f1">Fees & Payments</a></li>
+                                                                        <li><a href="" id="f1">Returns & Refunds
+                                                                                Policy</a></li>
+                                                                        <li><a href="" id="f1">Promotions Terms &
+                                                                                Conditions</a></li>
+                                                                    </ul>
+
+                                                                </div>
+                                                                <div class="footer1">
+                                                                    <h6 class="foot1"><a href="" id="f1">Help</a></h6>
+                                                                    <ul>
+                                                                        <li> <a href="" id="f1">Track Your Order </a>
+                                                                        </li>
+                                                                        <li> <a href="" id="f1">Frequently Asked
+                                                                                Questions</a></li>
+                                                                        <li><a href="" id="f1">Returns</a></li>
+                                                                        <li><a href="" id="f1">Cancellations</a></li>
+                                                                        <li><a href="" id="f1">Payments</a></li>
+                                                                        <li><a href="" id="f1">Customer Care</a></li>
+                                                                        <li><a href="" id="f1">How Do I Redeem My
+                                                                                Coupon</a></li>
+
+                                                                </div>
+                                                                <div class="footer1">
+                                                                    <h6 class="foot1"><a href="" id="f1">Shop by</a>
+                                                                    </h6>
+                                                                    <ul>
+                                                                        <li> <a href="" id="f1">Men</a></li>
+                                                                        <li> <a href="" id="f1">Women</a></li>
+                                                                        <li><a href="" id="f1">Kids</a></li>
+                                                                        <li><a href="" id="f1">Indie</a></li>
+                                                                        <li><a href="" id="f1">Stores</a></li>
+                                                                        <li><a href="" id="f1">New Arrivals</a></li>
+                                                                        <li><a href="" id="f1">Brand Directory</a></li>
+                                                                        <li><a href="" id="f1">Home</a></li>
+                                                                        <li><a href="" id="f1">Collection</a></li>
+
+                                                                </div>
+                                                                <div class="footer1">
+                                                                    <h6 class="foot1"><a href="" id="f1">Follow us</a>
+                                                                    </h6>
+                                                                    <ul>
+                                                                        <li> <a href="" id="f1">Facbook</a></li>
+                                                                        <li> <a href="" id="f1">instagram-AJIOlife</a>
+                                                                        </li>
+                                                                        <li><a href="" id="f1">instagram-AJIO LUXE</a>
+                                                                        </li>
+                                                                        <li><a href="" id="f1">Twitter</a></li>
+                                                                        <li><a href="" id="f1">Pinterest</a></li>
+
+                                                                </div>
+                                                            </div>
+                                                            <hr class="color">
+                                                            <div><img src="imgs/payments method.png" alt=""
+                                                                    width="100%"></div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            </footer>
+
+                                        </div>
